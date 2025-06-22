@@ -3,34 +3,45 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <link rel="stylesheet" href="src/style.css" />
     <title>ForecastNow</title>
   </head>
   <body>
+    <div class="weather-box">
     <header>
       <form>
-        <input type="text" placeholder="Enter city" required />
-        <input type="submit" value="Search" />
+        <input type="text" placeholder="Enter city" class="search-input" />
+        <input type="submit" value="Search" class="search-button"/>
       </form>
     </header>
     <main>
-      <div>
+    <div class="weather-details">
         <h1>Johannesburg</h1>
-        <p>
+        <p class="weather-info">
           Thursday 8:45, scattered clouds
           <br />
           Humidity: 76%, Wind: 0.89km/h
         </p>
+      
+      <div class="temperature">
+        <p>
+          <span class="weather-icon">🌥️</span>
+          <span class="current-temperature">16</span>
+          <span class="celsius">°C</span>
+        </p>
       </div>
-      <div>
-        <p>🌥️16°C</p>
-      </div>
+    </div>
     </main>
-
+<hr>
     <footer>
       Coded by
-      <a href="https://github.com/EmFirefly">Megan van Zyl</a>
-      is open-sourced on <a href="">Github</a> and hosted on
-      <a href="">Netlify</a>
+      <a href="https://github.com/EmFirefly" target="_blank">Megan van Zyl</a>
+      is open-sourced on 
+      <a href="#" target="_blank">Github</a>
+       and hosted on
+      <a href="#" target="_blank">Netlify</a>
     </footer>
+  </div>
+    <script src="src/script.js"></script>
   </body>
 </html>
