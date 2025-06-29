@@ -1,19 +1,20 @@
 function getWeatherData(response) {
-    console.log(response.data);
-    let temperatureElement = document.querySelector('.current-temperature');
-    let weatcherIconElement = document.querySelector('.weather-icon');
+       let temperatureElement = document.querySelector('.current-temperature');
     let humidityElement = document.querySelector('#humidity');
     let windSpeedElement = document.querySelector('#windspeed');
     let cityElement = document.querySelector('#city-main');
-    let timeElement = document.querySelector('#date');
+    let dateElement = document.querySelector('#date');
+    let weatherConditionElement = document.querySelector('#weather-condition');
     let date = new Date(response.data.time * 1000);
-    
+    let icon = document.querySelector('#icon');
+
+    icon.innerHTML =`<img src="${response.data.condition.icon_url}" id="icon" />`;
     cityElement.innerHTML = response.data.city ;
+    weatherConditionElement.innerHTML = response.data.condition.description;
     temperatureElement.innerHTML = Math.round(response.data.temperature.current);
-    weatcherIconElement.innerHTML = `<img src="${response,data.condition.icon_url}" class="weather-app-icon">`;
     humidityElement.innerHTML = response.data.temperature.humidity;
     windSpeedElement.innerHTML = Math.round(response.data.wind.speed);
-    timeElement.innerHTML = formatDate(date);
+    dateElement.innerHTML = formatDate(date);
 
 }   
 
