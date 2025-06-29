@@ -9,14 +9,14 @@
   <body>
     <div class="weather-box">
     <header>
-      <form>
-        <input type="text" placeholder="Enter city" class="search-input" />
+      <form class="search-form" id="search-form">
+        <input type="text" placeholder="Enter city" class="search-input" id="search-input" />
         <input type="submit" value="Search" class="search-button"/>
       </form>
     </header>
     <main>
     <div class="weather-details">
-        <h1>Johannesburg</h1>
+        <h1 id="city-main">Johannesburg</h1>
         
         <p class="weather-info">
           Thursday 8:45, scattered clouds
@@ -42,6 +42,6 @@
       <a href="#" target="_blank">Netlify</a>
     </footer>
   </div>
-    <script src="src/script.js"></script>
+    <script src="src/index.js"></script>
   </body>
 </html>
