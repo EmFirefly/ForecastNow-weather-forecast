@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
      <link rel="stylesheet" href="src/style.css" />
+     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <title>ForecastNow</title>
   </head>
   <body>
@@ -19,9 +20,9 @@
         <h1 id="city-main">Johannesburg</h1>
         
         <p class="weather-info">
-          Thursday 8:45, scattered clouds
+         <span id="date">Thursday</span> <span id="military-time"> 8:45</span>, scattered clouds
           <br />
-          Humidity: 76%, Wind: 0.89km/h
+          Humidity: <span id="humidity">76</span>%, Wind: <span id="windspeed"> 0.89</span>km/h
         </p>
       
       <div class="temperature">
